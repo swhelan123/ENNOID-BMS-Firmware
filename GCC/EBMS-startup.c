@@ -15,6 +15,7 @@ void __libc_init_array(void);
 void Reset_Handler(void);
 // put in prototypes
 // void Reset_Handler               (void) __attribute__ ((weak, alias("Default_Handler")));
+extern void SystemInit(void);
 void NMI_Handler                    (void) __attribute__ ((weak, alias("Default_Handler")));
 void HardFault_Handler              (void) __attribute__ ((weak, alias("Default_Handler")));
 void MemManage_Handler              (void) __attribute__ ((weak, alias("Default_Handler")));

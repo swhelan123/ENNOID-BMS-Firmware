@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "make build_args='-DENNOID_HV=1'",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "clean",
+      "type": "shell",
+      "command": "make clean"
+    },
+    {
+      "label": "flash",
+      "type": "shell",
+      "command": "make upload-bin-stlink",
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}
